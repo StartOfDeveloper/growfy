@@ -1,0 +1,290 @@
+<‹‹‹ Главный контейнер слайдера - -
+‹div class="swiper-container›
+‹! -- обязательная оболочка - - ›
+<div class-"swiper-wrapper">
+< ! - - Слайды- (- - )
+‹div class="swiper-slide")
+<! - - Контент врутри слайда - - >
+Текст, картинки, другие слайдеры, теги и т.д.
+</div> ‹div class-"swiper-slide">
+<! -- Контент врутри слайда : - ->
+Текст, картинки, другие слайдеры, теги и т.д.
+</div> ‹div class="swiper-slide"›
+<! -- Контент врутри слайда (- - >
+Текст, картинки, другие слайдеры, теги и т.д.
+</div>
+<< - - - и так далее...
+- - >
+</div>
+<! - - Добавляем если нам нужны стрелки управления -
+- )
+<div class="swiper-button-prev"›‹/div› ‹div class="swiper-button-next›‹/div›
+<! - - Добавляем, если нам нужна пагинация - -›
+‹div class="swiper-pagination></div>
+<!- - Добавляем если нам нужна полоса прокрутки (scrollbar) - ››
+‹div class="swiper-scrollbar›‹/div>
+</div>
+
+JavaScript//////////////////////////////////////////////////
+// инициализируем Swiper
+new Swiper(*image-slider', {
+// Стрелки
+navigation: {
+nextEl:
+".swiper-button-next' prevel:
+".swiper-button-prev
+// навигация
+// Буллеты, текущее положение, прогрессбар
+pagination: {
+el: ' ‚swiper-pagination'
+// Буллеты
+clickable: true,
+// динамические буллеты
+dynamicBullets: true,
+/ / кастомные буллеты
+renderBullet: function (index, className) {
+return "«span class="' + className + !., r + (index + 1) +. '</span»' ;},
+
+/ • Фракция
+type: 'fraction',
+// кастомный выбод фракции
+renderFraction: function (currentClass, totalclass) {
+return: 'фoтo <span class-"' + currentclass + '"›‹/span>'+ ‘ из’ +'‹span class="' + totalclass + '"›‹span›';
+///// поменять тип
+type : ‘progressbar’
+
+ Скролл
+scrollbar: {
+el: ' .swiper-scrollbar'
+// Возможность перетаскивать скролл
+draggable: true
+
+/ Включение /отключение // перетаскивания на ПК
+simulateTouch: true,
+/ чувствительность свайпа
+touchRatio: 1,
+// угол срабатывания свайпа/перетаскивания
+touchAngle: 45,
+// Курсор перетаскивания
+grabCursor: true,
+
+// Переключение при клике на слайд
+slideToclickedslide:true,
+
+////////////указать слайдам атрибут data-hash-"slide-«номер»"//////
+
+// навигация по хешу
+hashNavigation: {
+// отслеживать
+watchstate: true,
+},
+
+/ Управление клавиатурой
+keyboard: {
+/• Включить\ выключить
+enabled: true,
+/ • Включить \выключить // только когда слайдер / в пределах вьюпорта
+onlyInViewport: true,
+/ Включить\ выключить // управление клавишами
+// pageUp, pageDown
+pageUpDown: true,
+},
+
+// Управление колесом мыши
+mousewheel: {
+// Чувствительность колеса мыши
+sensitivity: 1,
+// Класс объекта на котором // будет • срабатывать - прокрутка мышью.
+event sTarget: " image-slider"
+},
+
+// Автовысота
+autoHeight: true,
+
+// Количество слайдов для показа
+slidesPerView: 1(можно указать auto),
+
+// • Отключение функционала
+//если слайдов меньше чем нужно
+watchoverflow: true,
+
+// Отступы между слайдами
+spaceBetween: 30,
+
+// Количество пролистыбаемых слайдов
+slidesPerGroup: 3,
+
+// Активный слайд по центру
+centeredslides: true,
+
+// Стартовый слайд.
+initialslide: 1(первый слайд = 0),
+
+// мультирядность
+slidesPerColumn: 2(отключить autoHeight),
+
+// Бесконечный слайдер
+loop: true,
+
+// Кол-во дублирующих слайдов
+loopedslides: 3,
+
+// свободный режим
+freeMode: true,
+
+// Автопрокрутка
+autoplay:
+{
+// Пауза между прокруткой
+delay: 1000,
+// Закончить на последнем слайде
+stoponLastslide: true,
+/ Отключить • после ручного переключения
+disable0nInteraction: false
+},
+
+// Скорость speed: 800,
+
+// • Вертикальный слайдер
+direction: 'vertical',
+
+effect: 'fade', (по умолчанию ’slide’)
+// дополнение к fade
+fadeEffect: {
+//•Параллельная
+//• смена прозрачности
+crossFade: true
+},
+
+effect: 'flip',
+// Дополнение к flip
+flipEffect: {
+// Тень
+slideshadows: true,
+// Показ только активного слайда
+limitRotation: true
+},
+
+effect: 'cube'
+// Дополнение • к cube
+cubeEffect: {
+// Настройки тени
+slideShadows: true,
+ shadow: true, 
+ shadowoffset: 20,
+  shadowScale: 0.94
+},
+
+// • Эффекты переключения слайдов.
+// Эффект потока
+effect: "coverflow'
+// Дополнение к coverfLow
+coverflowEffect: {
+// Угол
+rotate: 20,
+// Наложение
+stretch: 50,
+// Тень
+slideshadows: true,
+},
+
+// Брейк поинты - (адаптив)
+// Ширина экрана
+breakpoints: {
+320: {
+slidesPerView: 1,
+},
+480: {
+slidesPerview: 2,
+},
+992: {
+slidesPerView: 3,
+},
+},
+
+Брейк поинты (адаптив) ,
+/ / • Соотношение сторон
+breakpoints: {
+‘@0.75’:{
+slidesPerView: 1,
+},
+‘@1.00’:{ 
+slidesPerView: 2,
+},
+‘@1.00’:{ 
+slidesPerView: 3,
+},
+},
+
+/ Отключить предзагрузка картинок
+preloadImages: false,
+// Lazy Loading
+// (подгрузка картинок)
+lazy: {
+// Подгружать на старте // переключения слайда
+loadOnTransitionStart: false,
+// • Подгрузить предыдущую // и следующую картинки
+loadPrevNext: false,
+// Слежка за видимыми слайдами
+watchSlidesProgress: true,
+/ Добавление класса видимым слайдам
+watchslidesVisibility: true,
+
+Для зумирования по клику нужно добавить класс «swiper-zoom-container» оболочке картинки!
+И добавить настройку zoom!
+zoom: {
+/ Макимальное увеличение
+maxatio: 5,
+// Минимальное увеличение
+minatio: 1,
+},
+
+// Миниатюры (превью)
+thumbs: {
+//- Свайпер с мениатюрами
+// и его настройки
+swiper: {
+el: ' image-mini-slider' 
+slidesPerview: 5,
+},
+
+// Слайдер в слайдере
+new Swiper(' .image-in-slider', {
+// Курсор перетаскивания
+grabCursor: true,
+// Навигация
+// пагинация, текущее положение, прогрессбар
+pagination: {
+el: " .swiper-pagination',
+// Буллеты
+clickable: true,
+Корректная работа 
+// перетаскивания \ свайпа 
+// для дочернего слайдера
+nested: true,
+},
+
+Для склейки двух слайдеров(количество показываемых слайдов должно быть одинаковым и поместить в переменные инициализацию слайдеров)
+
+ Передача управления
+myImageslider.controller.control = myTextslider;
+myTextslider. controller. control = myImageslider;
+
+// Обновить свайпер // при изменении элементов слайдера
+observer: true,
+/ - обновить свайпер // при изменении родительских //•элементов слайдера
+observeParents: true,
+/ обновить свайпер / при изменении дочерних // элементов слайда
+observeslidechildren: true,
+
+виртуальные слайды / формирование • слайдера
+virtual: {
+slides: (function• () {
+let slide = 1
+for (let i = 0; 1 < 500; i++) {
+slide.push(‘ ‹div class-"image-slider text" ›Слайд-№${i}</div»');
+}
+retutn slide;
+},
+});
+
