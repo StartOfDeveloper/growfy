@@ -13,7 +13,7 @@ let slideSwiper = new Swiper('.swiper', {
              slidesPerview: 2.9,
             },
         320: {
-        slidesPerView: 2.3,
+            slidesPerView: 1.3,
             },
         },
 });
