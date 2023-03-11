@@ -1639,6 +1639,12 @@ height: 68px;
     .six-top-grup p{
         max-width: 90%;
     }
+    .three-right-grup {
+        width: 80%;
+    }
+    .three-right-grup p {
+       padding: 0;
+    }
 /*Footer*/
 .footer {
     display: grid;
@@ -1929,17 +1935,15 @@ padding-top: 80px;
     flex-direction: column-reverse;
     justify-content: flex-end;
     align-items: center;
-    row-gap: 64px;
+    row-gap: 32px;
 }
 .three-left-grup {
-    height: 100%;
-    flex: 0 0 608px;
+    flex: 0 0 auto;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
-    row-gap: 32px;
+    row-gap: 0px;
 }
 .three-left-img-one {
     width: 211.68px;
@@ -1967,7 +1971,6 @@ padding-top: 80px;
     color: #9C9C9C;
     margin-top: 40px;
     text-align: center;
-    padding: 0 50px;
 }
 .three-left-img-one {
 height: 400px;
@@ -2091,6 +2094,9 @@ object-fit: contain;
     align-items: center;
     padding-top: 32px;
     row-gap: 48px;
+}
+.six-card {
+    padding-bottom: 10px;
 }
 .six-card:not(:last-child) {
     margin-right: 0px;
@@ -2273,6 +2279,9 @@ object-fit: contain;
     grid-template-columns: 300px;
     grid-template-rows: 278px 278px 278px 278px minmax(auto, 400px);
 }
+.slides-title h3 {
+    font-size: 12.5px;
+}
 }
 @media (max-width: 360px) {
     .six-card {
@@ -2280,5 +2289,68 @@ object-fit: contain;
         padding-bottom: 15px;
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+@media (max-width: 350px) {
+    .header-right button {
+        width: 130px;
+        height: 42px;
+    }
+    .info-txt h1 {
+        max-width: 90%;
+        font-size: 31px;
+    }
+    .button-our { 
+        width: 90%;
+    }
+    .button-us {
+        width: 90%;
+    }
+    .slides-title h3 {
+        font-size: 11px;
+    }
+    .section-twho-button-twho {
+        width: 90%;
+}
+.three-right-grup {
+    width: 95%;
+}
+.three-right-grup li{
+    font-size: 14px;
+}
+.five-top-right-el button {
+    width: 190px;
+}
+.card-wrapper {
+    width: 254px;
+    height: auto;
+}
+.six-card {
+    max-width: 290px;
+}
+.seven-right-grup {
+    width: 100%;
+}
+.seven-button-one {
+    width: 90%;
+}
+.seven-button-twho {
+    width: 90%;
+}
+.section-seven {
+    padding-top: 80px;
+}
+.footer {
+    padding-top: 128px;
+}
+.conteiner {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.slides {
+    padding-top: 80px;
+    }
+.swiper{
+        width: 95%;
     }
 }
