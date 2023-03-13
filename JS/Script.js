@@ -17,7 +17,6 @@ let slideSwiper = new Swiper('.swiper', {
             },
         },
 });
-
 const burgerMenu = document.querySelector('.header-nuv-menu');
 const burgerMenuItems = document.querySelector('.nav');
 const navBlock = document.querySelector('.nav-block')
@@ -28,7 +27,6 @@ if (burgerMenu) {
             bodyElement.classList.toggle('bodyMenu');
     })
 }
-
 const elementsFooter = document.querySelector('.footer');
 const footerSpolerOne = document.querySelector('.footer-grup-2');
 const footerSpolerTwho = document.querySelector('.footer-grup-3');
@@ -39,4 +37,19 @@ elementsFooter.addEventListener('click', function spoiler (e) {
     if (e.target.closest('.spoilerBatton-2')) {
         footerSpolerTwho.classList.toggle('active_spoler');
     }
+    e.preventDefault()
 })
+const allImg = document.querySelectorAll('img');
+let imgObserver = new IntersectionObserver(function (entries, observer){
+    entries.forEach(function (entry){
+    if (entry.isIntersecting) {
+        entry.target.src = entry.target.dataset.src;
+        observer.unobserve(entry.target)
+    }
+})
+})
+allImg.forEach(function (item){
+    if (item.hasAttribute('data-src')){
+        imgObserver.observe(item)
+    } else return;
+});
