@@ -2263,18 +2263,35 @@ object-fit: contain;
 .footer-grup-3 ul{
     max-height: 0px;
     overflow: hidden;
-    transition: all 0.3s linear 0s;
+    transition: all 0.5s linear 0s;
 }
-.active_spoler ul {
-    max-height: 100%;
+.footer-grup-3.active_spoler ul {
+    max-height: 250px;
+    overflow: auto;
 }
 .footer-grup-2 ul{
+    margin-top: 15px;
     max-height: 0px;
     overflow: hidden;
-    transition: all 0.3s linear 0s;
+    transition: all 0.5s linear 0s;
 }
-.active_spoler ul {
-    max-height: 100%;
+.footer-grup-2 li{
+   transform: translate(0px, -100vh);
+    transition: all 0.5s linear 0s;
+}
+.footer-grup-2.active_spoler li{
+    transform: translate(0px, 0px);
+}
+.footer-grup-3 li{
+    transform: translate(0px, -100vh);
+     transition: all 0.5s linear 0s;
+ }
+ .footer-grup-3.active_spoler li{
+     transform: translate(0px, 0px);
+ }
+ .footer-grup-2.active_spoler ul {
+    max-height: 250px;
+    overflow: auto;
 }
 .spoilerBatton-1{
     position: relative;
@@ -2293,11 +2310,13 @@ object-fit: contain;
 .spoilerBatton-1::before {
     transform: rotate(-40deg);
     left: 5px;
+    top: 0.5px;
     transition: all 0.3s linear 0s;
 }
 .spoilerBatton-1::after{
     transform: rotate(40deg);
     left: 17px;
+    top: 0.5px;
     transition: all 0.3s linear 0s;
 }
 .active_spoler .spoilerBatton-1::before {
@@ -2323,11 +2342,13 @@ object-fit: contain;
 .spoilerBatton-2::before {
     transform: rotate(-40deg);
     left: 5px;
+    top: 0.5px;
     transition: all 0.3s linear 0s;
 }
 .spoilerBatton-2::after{
     transform: rotate(40deg);
     left: 17px;
+    top: 0.5px;
     transition: all 0.3s linear 0s;
 }
 .active_spoler .spoilerBatton-2::before {
